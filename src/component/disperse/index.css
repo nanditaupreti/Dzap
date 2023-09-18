@@ -48,26 +48,3 @@ textarea {
     display: block;
     color: #506882;
 }
-
-.headingText {
-    text-align: 'initial';
-    color: 'grey';
-}
-
-.resultContainer {
-    border: '1px solid red';
-    padding: '8px 16px';
-    display: 'flex';
-    align-items: 'center';
-    border-radius: '2px';
-}
-
-.nextButton {
-    width: '48%';
-    padding: '8px';
-    background-color: '#000080';
-    color: 'white';
-    border-radius: '4px';
-    cursor: 'pointer';
-    margin-top: '16px'
-}

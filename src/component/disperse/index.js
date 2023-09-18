@@ -20,7 +20,6 @@ const Disperse = () => {
         const parts = line.split(/, |=|""| /); // Split the line by ", ", "", "=", or space
         if (parts.length === 2 && !isNaN(Number(parts[1]))) {
           const address = parts[0].trim();
-          const amount = parts[1].trim();
     
           if (uniqueAddresses[address]) {
             setDuplicatesEncountered(true);
@@ -76,8 +75,8 @@ const Disperse = () => {
     };
 
     return (
-        <div className='mainContainer'>
-            <p className='headingText'>Addresses with Amounts</p>
+        <div style={{margin: 'auto', width: '45%'}}>
+            <p style={{textAlign: 'initial', color: 'grey'}} >Addresses with Amounts</p>
             <div className="editor" >
                 <div className="line-numbers">
                     <span ></span>
@@ -85,7 +84,7 @@ const Disperse = () => {
                 <textarea value={lines.join('\n')} onChange={handleInputChange} >
                 </textarea>
             </div>
-            <p className='headingText'>Sepeated by ',' or '' or '='</p>
+            <p style={{textAlign: 'initial', color: 'grey'}}>Sepeated by ',' or '' or '='</p>
             <div>
                 {duplicatesEncountered && <div style={{display: 'flex', justifyContent: 'space-between'}}>
                     <p style={{color: 'red'}}>Duplicated</p>
@@ -101,7 +100,7 @@ const Disperse = () => {
                 </div>}
                 {result.map((line, index) => (
                     line ? 
-                    <div style={index != 1 ? {marginTop: '24px'} : {marginTop: 0}} className='resultContainer'>
+                    <div style={index !== 1 ? {marginTop: '24px', border: '1px solid red', padding: '8px 16px', display: 'flex', alignItems: 'center', borderRadius: '2px', width: '100%'} : {marginTop: 0, border: '1px solid red', padding: '8px 16px', display: 'flex', alignItems: 'center', borderRadius: '2px', width: '100%'}} className='resultContainer'>
                         <svg
                             viewBox="0 0 24 24"
                             fill="currentColor"
@@ -118,7 +117,7 @@ const Disperse = () => {
                 ))}
             </div>
             <div>
-                <button className='nextButton' onClick={onSubmit}>Next</button>
+                <button style={{ width: '48%', padding: '8px', backgroundColor: '#000080', color: 'white', borderRadius: '4px',cursor: 'pointer', marginTop: '16px'}} onClick={onSubmit}>Next</button>
             </div>  
         </div>
     )
