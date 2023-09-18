@@ -75,7 +75,7 @@ const Disperse = () => {
     };
 
     return (
-        <div style={{margin: 'auto', width: '45%'}}>
+        <div style={{margin: 'auto', width: '35%'}}>
             <p style={{textAlign: 'initial', color: 'grey'}} >Addresses with Amounts</p>
             <div className="editor" >
                 <div className="line-numbers">
@@ -117,7 +117,7 @@ const Disperse = () => {
                 ))}
             </div>
             <div>
-                <button style={{ width: '48%', padding: '8px', backgroundColor: '#000080', color: 'white', borderRadius: '4px',cursor: 'pointer', marginTop: '16px'}} onClick={onSubmit}>Next</button>
+                <button style={{ width: '85%', padding: '8px', backgroundColor: '#000080', color: 'white', borderRadius: '4px',cursor: 'pointer', marginTop: '16px'}} onClick={onSubmit}>Next</button>
             </div>  
         </div>
     )
