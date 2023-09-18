@@ -70,7 +70,7 @@ const Disperse = () => {
           }
         }
     
-        const summedLines = Object.keys(amountMap).map((address) => `${address} = ${amountMap[address]}`);
+        const summedLines = Object.keys(amountMap).map((address) => `${address}=${amountMap[address]}`);
         setLines(summedLines);
     };
 
@@ -100,7 +100,7 @@ const Disperse = () => {
                 </div>}
                 {result.map((line, index) => (
                     line ? 
-                    <div style={index !== 1 ? {marginTop: '24px', border: '1px solid red', padding: '8px 16px', display: 'flex', alignItems: 'center', borderRadius: '2px', width: '100%'} : {marginTop: 0, border: '1px solid red', padding: '8px 16px', display: 'flex', alignItems: 'center', borderRadius: '2px', width: '100%'}} className='resultContainer'>
+                    <div style={index != 1 ? {marginTop: '24px', border: '1px solid red', padding: '8px 16px', display: 'flex', alignItems: 'center', borderRadius: '2px', width: '100%'} : {marginTop: 0, border: '1px solid red', padding: '8px 16px', display: 'flex', alignItems: 'center', borderRadius: '2px', width: '100%'}} className='resultContainer'>
                         <svg
                             viewBox="0 0 24 24"
                             fill="currentColor"
